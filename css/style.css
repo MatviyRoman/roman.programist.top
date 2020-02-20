@@ -333,20 +333,24 @@ body {
   margin-top: 50px;
 }
 
-.header .arrow {
+.header > .arrow {
   position: absolute;
-  bottom: 5%;
+  bottom: 10%;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  padding: 10px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
 }
 
-.header .arrow_down {
+.header > .arrow .arrow_down {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   -webkit-font-smoothing: antialiased;
 }
 
-.header .arrow_down:hover {
+.header > .arrow .arrow_down:hover {
   opacity: 0.5;
 }
 

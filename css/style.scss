@@ -263,13 +263,16 @@ body {
     }
   }
 
-  & .arrow {
+  & > .arrow {
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
     left: 50%;
-    transform: translate(-50%, 0);
-    padding: 10px;
-    &_down {
+    transform: translateX(-50%);
+    display: block;
+    & .arrow_down {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
       -webkit-font-smoothing: antialiased;
       &:hover {
         opacity: 0.5;
