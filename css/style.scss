@@ -1,4 +1,96 @@
+$section-first-bg: #1a242d;
+$section-first-color: #5d7e9e;
+
+$section-second-bg: #433e62;
+$section-second-color: #96956f;
+
+@mixin section {
+  padding: 50px 0 50px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+@mixin top-margin {
+  margin-top: -50px;
+}
+
+@mixin title-box {
+  .title-box {
+    width: 100%;
+    padding: 0 0 100px;
+    .title {
+      position: relative;
+      font-family: "Josefin Sans", Sans-serif;
+      font-size: 3rem;
+      font-weight: 700;
+      line-height: 1.2em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: left;
+      z-index: 2;
+      white-space: nowrap;
+    }
+    .subtitle {
+      position: relative;
+      padding-left: 42px;
+      font-family: "Josefin Sans", Sans-serif;
+      font-size: 7rem;
+      font-weight: 700;
+      line-height: 1.2em;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-align: left;
+      z-index: 1;
+      margin-top: -0.6em;
+      opacity: 0.4;
+      white-space: nowrap;
+    }
+  }
+}
+
+@mixin section-first {
+  background: $section-first-bg;
+  color: $section-first-color;
+  .title {
+    color: #fff;
+  }
+  .subtitle {
+    color: $section-second-bg;
+  }
+  .bg-transparent {
+    border: 2px solid #745b86;
+    color: #1a242d;
+    font-weight: 400;
+    &:hover {
+      border: 2px solid #fff;
+      color: #fff;
+    }
+  }
+}
+
+@mixin section-second {
+  background: $section-second-bg;
+  color: $section-second-color;
+  .title {
+  }
+  .subtitle {
+    color: $section-first-bg;
+  }
+  .bg-transparent2 {
+    background: #fff;
+    border: 2px solid #745b86;
+    color: #1a242d;
+    font-weight: 400;
+    &:hover {
+      background: #fff;
+      border: 2px solid #17a2b8;
+      color: #17a2b8 !important;
+    }
+  }
+}
+
 html {
+  $section-first: $section-first-bg;
   scroll-behavior: smooth;
 }
 
@@ -46,35 +138,6 @@ body {
   font-weight: 800 !important;
 }
 
-.title-box {
-  width: 100%;
-  padding: 50px 0 100px;
-  .title {
-    position: relative;
-    font-family: "Josefin Sans", Sans-serif;
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1.2em;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-align: left;
-    z-index: 2;
-  }
-  .subtitle {
-    position: relative;
-    padding-left: 42px;
-    font-family: "Josefin Sans", Sans-serif;
-    font-size: 7rem;
-    font-weight: 700;
-    line-height: 1.2em;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    text-align: left;
-    z-index: 1;
-    margin-top: -0.6em;
-  }
-}
-
 .title {
   color: #fff;
   text-transform: uppercase;
@@ -90,48 +153,13 @@ body {
 }
 
 .section {
+  @include section;
+  @include title-box;
   &:nth-child(odd) {
-    background: #1a242d;
-    color: #5d7e9e;
-    height: 100vh;
-    min-height: 300px;
-    & .title {
-      color: #fff;
-    }
-    & .subtitle {
-      color: #242937;
-    }
-    .bg-transparent {
-      border: 2px solid #745b86;
-      color: #1a242d;
-      font-weight: 400;
-      &:hover {
-        border: 2px solid #fff;
-        color: #fff;
-      }
-    }
+    @include section-first;
   }
   &:nth-child(even) {
-    background: #433e62;
-    color: #96956f;
-    height: 100vh;
-    min-height: 300px;
-    & .title {
-    }
-    & .subtitle {
-      color: #242937;
-    }
-    .bg-transparent2 {
-      background: #fff;
-      border: 2px solid #745b86;
-      color: #1a242d;
-      font-weight: 400;
-      &:hover {
-        background: #fff;
-        border: 2px solid #17a2b8;
-        color: #17a2b8 !important;
-      }
-    }
+    @include section-second;
   }
 }
 
@@ -144,6 +172,7 @@ body {
   min-height: 300px;
   position: relative;
   .top {
+    @include top-margin;
     background: #fff6;
     .main-container {
       display: flex;
@@ -199,7 +228,7 @@ body {
     &--second-title {
       margin-bottom: 30px;
     }
-    & a {
+    a {
       display: inline-flex;
       text-align: center;
       align-items: center;
@@ -213,7 +242,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     display: block;
-    & .arrow_down {
+    .arrow_down {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
@@ -221,6 +250,26 @@ body {
       &:hover {
         opacity: 0.5;
       }
+    }
+  }
+}
+
+.about {
+  .main-container {
+    background: url(../img/me/orig/image.jpg) right top / contain no-repeat;
+    &::after {
+      // content: "";
+      // background: url(../img/me/orig/image.jpg) right top/contain no-repeat;
+      // width: 50%;
+      // height: 500px;
+      // position: relative;
+      // display: flex;
+    }
+    .text {
+      background: #fff9;
+      color: #000;
+      padding: 25px 20px 30px;
+      border-radius: 20px;
     }
   }
 }

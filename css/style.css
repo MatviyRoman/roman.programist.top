@@ -7,9 +7,9 @@ body {
   font-weight: 400;
   font-size: 17px;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   overflow-x: hidden;
   overflow-y: scroll;
   -webkit-transition: all 7s ease-out;
@@ -17,7 +17,7 @@ body {
   -webkit-transition-property: color, background-color;
   transition-property: color, background-color;
   -webkit-transition-duration: 10s;
-          transition-duration: 10s;
+  transition-duration: 10s;
   color: #fff;
 }
 
@@ -55,37 +55,6 @@ body {
   font-weight: 800 !important;
 }
 
-.title-box {
-  width: 100%;
-  padding: 50px 0 100px;
-}
-
-.title-box .title {
-  position: relative;
-  font-family: "Josefin Sans", Sans-serif;
-  font-size: 3rem;
-  font-weight: 700;
-  line-height: 1.2em;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-align: left;
-  z-index: 2;
-}
-
-.title-box .subtitle {
-  position: relative;
-  padding-left: 42px;
-  font-family: "Josefin Sans", Sans-serif;
-  font-size: 7rem;
-  font-weight: 700;
-  line-height: 1.2em;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-align: left;
-  z-index: 1;
-  margin-top: -0.6em;
-}
-
 .title {
   color: #fff;
   text-transform: uppercase;
@@ -100,11 +69,49 @@ body {
   width: 100%;
 }
 
+.section {
+  padding: 50px 0 50px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.section .title-box {
+  width: 100%;
+  padding: 0 0 100px;
+}
+
+.section .title-box .title {
+  position: relative;
+  font-family: "Josefin Sans", Sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: left;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.section .title-box .subtitle {
+  position: relative;
+  padding-left: 42px;
+  font-family: "Josefin Sans", Sans-serif;
+  font-size: 7rem;
+  font-weight: 700;
+  line-height: 1.2em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: left;
+  z-index: 1;
+  margin-top: -0.6em;
+  opacity: 0.4;
+  white-space: nowrap;
+}
+
 .section:nth-child(odd) {
   background: #1a242d;
   color: #5d7e9e;
-  height: 100vh;
-  min-height: 300px;
 }
 
 .section:nth-child(odd) .title {
@@ -112,7 +119,7 @@ body {
 }
 
 .section:nth-child(odd) .subtitle {
-  color: #242937;
+  color: #433e62;
 }
 
 .section:nth-child(odd) .bg-transparent {
@@ -129,12 +136,10 @@ body {
 .section:nth-child(even) {
   background: #433e62;
   color: #96956f;
-  height: 100vh;
-  min-height: 300px;
 }
 
 .section:nth-child(even) .subtitle {
-  color: #242937;
+  color: #1a242d;
 }
 
 .section:nth-child(even) .bg-transparent2 {
@@ -151,7 +156,8 @@ body {
 }
 
 .header {
-  background: #1a242d url(../img/background/22bg.jpg) fixed center/cover no-repeat !important;
+  background: #1a242d url(../img/background/22bg.jpg) fixed center/cover
+    no-repeat !important;
   color: #5d7e9e;
   color: #000;
   height: 100vh;
@@ -160,6 +166,7 @@ body {
 }
 
 .header .top {
+  margin-top: -50px;
   background: #fff6;
 }
 
@@ -168,10 +175,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .header .top__menu {
@@ -183,10 +190,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .header .top__menu ul li a {
@@ -210,10 +217,10 @@ body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .header .top__social ul li a {
@@ -226,15 +233,15 @@ body {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .header__title--first_title {
@@ -251,8 +258,8 @@ body {
   display: inline-flex;
   text-align: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 50px;
 }
 
@@ -261,7 +268,7 @@ body {
   bottom: 10%;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   display: block;
 }
 
@@ -269,12 +276,23 @@ body {
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   -webkit-font-smoothing: antialiased;
 }
 
 .header > .arrow .arrow_down:hover {
   opacity: 0.5;
+}
+
+.about .main-container {
+  background: url(../img/me/orig/image.jpg) right top/contain no-repeat;
+}
+
+.about .main-container .text {
+  background: #fff9;
+  color: #000;
+  padding: 25px 20px 30px;
+  border-radius: 20px;
 }
 
 .skillset {
@@ -284,7 +302,7 @@ body {
 
 .icon {
   -webkit-filter: invert(1);
-          filter: invert(1);
+  filter: invert(1);
   display: inline-block;
   background: url(../img/decorations/sprites.png) no-repeat;
 }
@@ -292,12 +310,12 @@ body {
 .icon:hover {
   position: relative;
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .icon.black {
   -webkit-filter: none;
-          filter: none;
+  filter: none;
 }
 
 .icon.form {
@@ -305,7 +323,7 @@ body {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .icon.flask {
