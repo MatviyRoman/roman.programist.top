@@ -1,3 +1,5 @@
+$pimary-color: #fff;
+
 $section-first-bg: #1a242d;
 $section-first-color: #5d7e9e;
 
@@ -42,7 +44,7 @@ $section-second-color: #96956f;
       text-align: left;
       z-index: 1;
       margin-top: -0.6em;
-      opacity: 0.4;
+      opacity: 0.2;
       white-space: nowrap;
     }
   }
@@ -52,7 +54,7 @@ $section-second-color: #96956f;
   background: $section-first-bg;
   color: $section-first-color;
   .title {
-    color: #fff;
+    color: $pimary-color;
   }
   .subtitle {
     color: $section-second-bg;
@@ -62,8 +64,8 @@ $section-second-color: #96956f;
     color: #1a242d;
     font-weight: 400;
     &:hover {
-      border: 2px solid #fff;
-      color: #fff;
+      border: 2px solid $pimary-color;
+      color: $pimary-color;
     }
   }
 }
@@ -104,7 +106,7 @@ body {
   transition: all 7s ease-out;
   transition-property: color, background-color;
   transition-duration: 10s;
-  color: #fff;
+  color: $pimary-color;
 }
 
 .main-container {
@@ -117,7 +119,7 @@ body {
   color: #17a2b8;
   transition: all 0.4s ease-in-out;
   font-family: "Robboto", serif;
-  color: #fff;
+  color: $pimary-color;
   background: #745b86;
   border: 0;
   border-bottom: 2px solid rgba(10, 10, 10, 0.1);
@@ -125,7 +127,7 @@ body {
   text-transform: uppercase;
   padding: 15px 25px;
   &:hover {
-    color: #fff;
+    color: $pimary-color;
     background: #17a2b8;
   }
   i {
@@ -139,14 +141,14 @@ body {
 }
 
 .title {
-  color: #fff;
+  color: $pimary-color;
   text-transform: uppercase;
   text-align: center;
   width: 100%;
 }
 
 .subtitle {
-  color: #fff;
+  color: $pimary-color;
   text-transform: capitalize;
   text-align: center;
   width: 100%;
@@ -193,7 +195,7 @@ body {
             text-transform: uppercase;
             &:hover {
               padding-bottom: 19px;
-              border-bottom: 2px solid #f00;
+              border-bottom: 2px solid $pimary-color;
             }
           }
         }
