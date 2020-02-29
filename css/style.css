@@ -474,6 +474,12 @@ body {
   right: 0;
 }
 
+.skillset progress,
+.languages progress {
+  -webkit-transition: width 5s;
+  transition: width 5s;
+}
+
 .skillset progress:not(value),
 .languages progress:not(value) {
   /* Add your styles here. As part of this walkthrough we will focus only on determinate progress bars. */
@@ -481,6 +487,8 @@ body {
 
 .skillset progress[value],
 .languages progress[value] {
+  -webkit-transition: width 5s;
+  transition: width 5s;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -527,7 +535,9 @@ body {
 
 .skillset progress[value]::-moz-progress-bar,
 .languages progress[value]::-moz-progress-bar {
-  background-image: -moz-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -moz-linear-gradient(left, #09c, #f44);
+  -webkit-transition: width 5s;
+  transition: width 5s;
+  background-image: linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), linear-gradient(left, #09c, #f44);
   background-size: 35px 20px, 100% 100%, 100% 100%;
   border-radius: 3px;
 }
@@ -550,22 +560,10 @@ body {
   text-indent: -9999px;
 }
 
-.skillset .animated::-moz-progress-bar,
-.languages .animated::-moz-progress-bar {
-  -webkit-transition: padding-bottom 1s;
-  transition: padding-bottom 1s;
-  padding-left: 60px;
-  padding-bottom: var(--value);
-  background-color: blue;
-  height: 0;
-  transform-origin: 0 0;
-  transform: rotate(-90deg) translateX(-60px);
-}
-
-.skillset .animated::-ms-fill,
-.languages .animated::-ms-fill {
-  background-color: blue;
-  border: 0;
+.skillset .animated,
+.languages .animated {
+  -webkit-transition: width 5s;
+  transition: width 5s;
 }
 
 .skillset .animated::-webkit-progress-value,
@@ -577,7 +575,23 @@ body {
 
 .skillset .animated::-moz-progress-bar,
 .languages .animated::-moz-progress-bar {
-  background-image: -webkit-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -webkit-linear-gradient(left, #09c, #f44);
+  -webkit-transition: width 5s;
+  transition: width 5s;
+  background-image: -moz-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -moz-linear-gradient(left, #09c, #f44);
+}
+
+.skillset .animated::-moz-progress-value,
+.languages .animated::-moz-progress-value {
+  -webkit-transition: width 5s;
+  transition: width 5s;
+  background-image: -moz-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -moz-linear-gradient(left, #09c, #f44);
+}
+
+.skillset .animated::progress-value,
+.languages .animated::progress-value {
+  -webkit-transition: width 5s;
+  transition: width 5s;
+  background-image: -moz-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -moz-linear-gradient(left, #09c, #f44);
 }
 
 @-webkit-keyframes animate-stripes {
