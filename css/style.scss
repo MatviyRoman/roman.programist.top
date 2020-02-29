@@ -460,12 +460,10 @@ body {
     }
   }
   progress {
-    transition: width 5s;
     &:not(value) {
       /* Add your styles here. As part of this walkthrough we will focus only on determinate progress bars. */
     }
     &[value] {
-      transition: width 5s;
       appearance: none;
       border: none;
       width: 100%;
@@ -497,21 +495,6 @@ body {
           border-radius: 100%;
         }
       }
-      &::-moz-progress-bar {
-        transition: width 5s;
-        background-image: linear-gradient(
-            135deg,
-            transparent,
-            transparent 33%,
-            rgba(0, 0, 0, 0.1) 33%,
-            rgba(0, 0, 0, 0.1) 66%,
-            transparent 66%
-          ),
-          linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
-          linear-gradient(left, #09c, #f44);
-        background-size: 35px 20px, 100% 100%, 100% 100%;
-        border-radius: 3px;
-      }
     }
   }
   .progress-bar {
@@ -528,13 +511,11 @@ body {
     }
   }
   .animated {
-    -moz-transition: width 5s;
     transition: width 5s;
     // &::-ms-fill {
     //   background-color: blue;
     //   border: 0;
-    // }
-
+    //}
     &::-webkit-progress-value {
       transition: width 5s;
       background-image: -webkit-linear-gradient(
@@ -545,45 +526,12 @@ body {
           rgba(0, 0, 0, 0.1) 66%,
           transparent 66%
         ),
-        -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+        -webkit-linear-gradient(to top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
         -webkit-linear-gradient(left, #09c, #f44);
       //-webkit-linear-gradient(left, #09c, #ff0);
       //-webkit-linear-gradient(left, #09c, #690);
     }
-
     &::-moz-progress-bar {
-      -moz-transition: width 5s;
-      transition: width 5s;
-      background-image: -moz-linear-gradient(
-          135deg,
-          transparent,
-          transparent 33%,
-          rgba(0, 0, 0, 0.1) 33%,
-          rgba(0, 0, 0, 0.1) 66%,
-          transparent 66%
-        ),
-        -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
-        -moz-linear-gradient(left, #09c, #f44);
-      //-moz-linear-gradient(left, #09c, #ff0);
-      //-moz-linear-gradient(left, #09c, #690);
-    }
-    &::-moz-progress-value {
-      -moz-transition: width 5s;
-      transition: width 5s;
-      background-image: -moz-linear-gradient(
-          135deg,
-          transparent,
-          transparent 33%,
-          rgba(0, 0, 0, 0.1) 33%,
-          rgba(0, 0, 0, 0.1) 66%,
-          transparent 66%
-        ),
-        -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
-        -moz-linear-gradient(left, #09c, #f44);
-      //-moz-linear-gradient(left, #09c, #ff0);
-      //-moz-linear-gradient(left, #09c, #690);
-    }
-    &::progress-value {
       -moz-transition: width 5s;
       transition: width 5s;
       background-image: -moz-linear-gradient(
