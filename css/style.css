@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: "Merriweather", serif;
+  font-family: 'Merriweather', serif;
   font-weight: 400;
   font-size: 17px;
   -webkit-user-select: none;
@@ -31,7 +31,7 @@ body {
   color: #17a2b8;
   -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
-  font-family: "Robboto", serif;
+  font-family: 'Robboto', serif;
   color: #fff;
   background: #745b86;
   border: 0;
@@ -82,7 +82,7 @@ body {
 
 .section .title-box .title {
   position: relative;
-  font-family: "Josefin Sans", Sans-serif;
+  font-family: 'Josefin Sans', Sans-serif;
   font-size: 3rem;
   font-weight: 700;
   line-height: 1.2em;
@@ -96,7 +96,7 @@ body {
 .section .title-box .subtitle {
   position: relative;
   padding-left: 42px;
-  font-family: "Josefin Sans", Sans-serif;
+  font-family: 'Josefin Sans', Sans-serif;
   font-size: 7rem;
   font-weight: 700;
   line-height: 1.2em;
@@ -294,11 +294,6 @@ body {
   border-radius: 20px;
 }
 
-.skillset {
-  background: #433e62;
-  color: #96956f;
-}
-
 .icon {
   -webkit-filter: invert(1);
           filter: invert(1);
@@ -433,25 +428,25 @@ body {
   background-position: -27px -0;
 }
 
-/* Now style the background */
-/* animation */
 .skillset ul,
 .languages ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .skillset li,
 .languages li {
-  font-family: "Expletus Sans", sans-serif;
+  font-family: 'Expletus Sans', sans-serif;
   width: 50%;
-  padding-right: 5.3333333%;
+  max-width: 500px;
   margin: 0 auto;
-}
-
-.skillset li:nth-child(even),
-.languages li:nth-child(even) {
+  padding: 10px;
   margin-bottom: 5em;
 }
 
@@ -472,6 +467,11 @@ body {
   content: attr(data-value) "%";
   position: absolute;
   right: 0;
+}
+
+.skillset progress span,
+.languages progress span {
+  display: block;
 }
 
 .skillset progress:not(value),
@@ -506,6 +506,8 @@ body {
 
 .skillset progress[value]::-webkit-progress-value,
 .languages progress[value]::-webkit-progress-value {
+  -webkit-transition: width 5s;
+  transition: width 5s;
   position: relative;
   background-size: 35px 20px, 100% 100%, 100% 100%;
   border-radius: 3px;
@@ -515,7 +517,7 @@ body {
 
 .skillset progress[value]::-webkit-progress-value::after,
 .languages progress[value]::-webkit-progress-value::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 5px;
   height: 5px;
@@ -523,6 +525,13 @@ body {
   right: 7px;
   background-color: white;
   border-radius: 100%;
+}
+
+.skillset progress[value]::-moz-progress-bar,
+.languages progress[value]::-moz-progress-bar {
+  background-image: -moz-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -moz-linear-gradient(left, #09c, #f44);
+  background-size: 35px 20px, 100% 100%, 100% 100%;
+  border-radius: 3px;
 }
 
 .skillset .progress-bar,
@@ -543,21 +552,27 @@ body {
   text-indent: -9999px;
 }
 
-.skillset .animated,
-.languages .animated {
+.skillset .animatedProgress,
+.languages .animatedProgress {
   -webkit-transition: width 5s;
   transition: width 5s;
 }
 
-.skillset .animated::-webkit-progress-value,
-.languages .animated::-webkit-progress-value {
-  -webkit-transition: width 5s;
-  transition: width 5s;
-  background-image: -webkit-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(to top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -webkit-linear-gradient(left, #09c, #f44);
+.skillset .animatedProgress::-ms-fill,
+.languages .animatedProgress::-ms-fill {
+  background-color: blue;
+  border: 0;
 }
 
-.skillset .animated::-moz-progress-bar,
-.languages .animated::-moz-progress-bar {
+.skillset .animatedProgress::-webkit-progress-value,
+.languages .animatedProgress::-webkit-progress-value {
+  -webkit-transition: width 5s;
+  transition: width 5s;
+  background-image: -webkit-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -webkit-linear-gradient(left, #09c, #f44);
+}
+
+.skillset .animatedProgress::-moz-progress-bar,
+.languages .animatedProgress::-moz-progress-bar {
   -webkit-transition: width 5s;
   transition: width 5s;
   background-image: -moz-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%), -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)), -moz-linear-gradient(left, #09c, #f44);

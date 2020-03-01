@@ -20,9 +20,10 @@ $section-second-color: #96956f;
   .title-box {
     width: 100%;
     padding: 0 0 100px;
+
     .title {
       position: relative;
-      font-family: "Josefin Sans", Sans-serif;
+      font-family: 'Josefin Sans', Sans-serif;
       font-size: 3rem;
       font-weight: 700;
       line-height: 1.2em;
@@ -32,10 +33,11 @@ $section-second-color: #96956f;
       z-index: 2;
       white-space: nowrap;
     }
+
     .subtitle {
       position: relative;
       padding-left: 42px;
-      font-family: "Josefin Sans", Sans-serif;
+      font-family: 'Josefin Sans', Sans-serif;
       font-size: 7rem;
       font-weight: 700;
       line-height: 1.2em;
@@ -53,16 +55,20 @@ $section-second-color: #96956f;
 @mixin section-first {
   background: $section-first-bg;
   color: $section-first-color;
+
   .title {
     color: $pimary-color;
   }
+
   .subtitle {
     color: $section-second-bg;
   }
+
   .bg-transparent {
     border: 2px solid #745b86;
     color: #1a242d;
     font-weight: 400;
+
     &:hover {
       border: 2px solid $pimary-color;
       color: $pimary-color;
@@ -73,16 +79,19 @@ $section-second-color: #96956f;
 @mixin section-second {
   background: $section-second-bg;
   color: $section-second-color;
-  .title {
-  }
+
+  .title {}
+
   .subtitle {
     color: $section-first-bg;
   }
+
   .bg-transparent2 {
     background: #fff;
     border: 2px solid #745b86;
     color: #1a242d;
     font-weight: 400;
+
     &:hover {
       background: #fff;
       border: 2px solid #17a2b8;
@@ -97,7 +106,7 @@ html {
 }
 
 body {
-  font-family: "Merriweather", serif;
+  font-family: 'Merriweather', serif;
   font-weight: 400;
   font-size: 17px;
   user-select: none;
@@ -118,7 +127,7 @@ body {
 .btn {
   color: #17a2b8;
   transition: all 0.4s ease-in-out;
-  font-family: "Robboto", serif;
+  font-family: 'Robboto', serif;
   color: $pimary-color;
   background: #745b86;
   border: 0;
@@ -126,10 +135,12 @@ body {
   border-radius: 5px;
   text-transform: uppercase;
   padding: 15px 25px;
+
   &:hover {
     color: $pimary-color;
     background: #17a2b8;
   }
+
   i {
     margin-right: 15px;
   }
@@ -157,42 +168,49 @@ body {
 .section {
   @include section;
   @include title-box;
+
   &:nth-child(odd) {
     @include section-first;
   }
+
   &:nth-child(even) {
     @include section-second;
   }
 }
 
 .header {
-  background: #1a242d url(../img/background/22bg.jpg) fixed center / cover
-    no-repeat !important;
+  background: #1a242d url(../img/background/22bg.jpg) fixed center / cover no-repeat !important;
   color: #5d7e9e;
   color: #000;
   height: 100vh;
   min-height: 300px;
   position: relative;
+
   .top {
     @include top-margin;
     background: #fff6;
+
     .main-container {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
     }
+
     &__menu {
       max-width: 700px;
+
       ul {
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
+
         li {
           a {
             padding: 20px;
             white-space: nowrap;
             display: block;
             text-transform: uppercase;
+
             &:hover {
               padding-bottom: 19px;
               border-bottom: 2px solid $pimary-color;
@@ -201,12 +219,15 @@ body {
         }
       }
     }
+
     &__social {
       max-width: 322px;
+
       ul {
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+
         li {
           a {
             padding: 10px;
@@ -216,6 +237,7 @@ body {
       }
     }
   }
+
   &__title {
     display: flex;
     flex-wrap: wrap;
@@ -224,12 +246,15 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
     &--first_title {
       font-size: 4em;
     }
+
     &--second-title {
       margin-bottom: 30px;
     }
+
     a {
       display: inline-flex;
       text-align: center;
@@ -238,17 +263,19 @@ body {
     }
   }
 
-  & > .arrow {
+  &>.arrow {
     position: absolute;
     bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     display: block;
+
     .arrow_down {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
       -webkit-font-smoothing: antialiased;
+
       &:hover {
         opacity: 0.5;
       }
@@ -259,6 +286,7 @@ body {
 .about {
   .main-container {
     background: url(../img/me/orig/image.jpg) right top / contain no-repeat;
+
     &::after {
       // content: "";
       // background: url(../img/me/orig/image.jpg) right top/contain no-repeat;
@@ -267,6 +295,7 @@ body {
       // position: relative;
       // display: flex;
     }
+
     .text {
       background: #fff9;
       color: #000;
@@ -276,146 +305,135 @@ body {
   }
 }
 
-.skillset {
-  background: #433e62;
-  color: #96956f;
-  .main-container {
-    .title {
-    }
-    p {
-    }
-  }
-}
-
 .icon {
   filter: invert(1);
   display: inline-block;
   background: url(../img/decorations/sprites.png) no-repeat;
+
   &:hover {
     position: relative;
     transform: scale(1.1);
   }
+
   &.black {
     filter: none;
   }
+
   &.form {
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
   &.flask {
     width: 31px;
     height: 33px;
     background-position: -54px -0;
   }
+
   &.pencil {
     width: 35px;
     height: 35px;
     background-position: -209px -0;
   }
+
   &.home {
     width: 37px;
     height: 35px;
     background-position: -559px -0;
   }
+
   &.map_marker {
     width: 27px;
     height: 35px;
     background-position: -0 -0;
   }
+
   &.paper_plane {
     width: 35px;
     height: 35px;
     background-position: -244px -0;
   }
+
   &.linkedin {
     width: 31px;
     height: 33px;
     background-position: -85px -0;
   }
+
   &.github {
     width: 35px;
     height: 35px;
     background-position: -279px -0;
   }
+
   &.phone {
     width: 35px;
     height: 35px;
     background-position: -314px -0;
   }
+
   &.user {
     width: 31px;
     height: 33px;
     background-position: -116px -0;
   }
+
   &.skype {
     width: 31px;
     height: 33px;
     background-position: -147px -0;
   }
+
   &.viber {
     width: 35px;
     height: 35px;
     background-position: -349px -0;
   }
+
   &.youtube {
     width: 31px;
     height: 33px;
     background-position: -178px -0;
   }
+
   &.arrow_down {
     width: 35px;
     height: 35px;
     background-position: -384px -0;
   }
+
   &.briefcase {
     width: 35px;
     height: 35px;
     background-position: -419px -0;
   }
+
   &.arrow_up {
     width: 35px;
     height: 35px;
     background-position: -454px -0;
   }
+
   &.envelope {
     width: 35px;
     height: 35px;
     background-position: -489px -0;
   }
+
   &.facebook {
     width: 35px;
     height: 35px;
     background-position: -524px -0;
   }
+
   &.file_download {
     width: 27px;
     height: 35px;
     background-position: -27px -0;
   }
 }
-
-/* Now style the background */
-
-// progress[value]::-webkit-progress-value {
-//   border-radius: 50px;
-//   box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.5);
-//   background-image: -webkit-linear-gradient(
-//       45deg,
-//       transparent,
-//       transparent 33%,
-//       rgba(0, 0, 0, 0.1) 33%,
-//       rgba(0, 0, 0, 0.1) 66%,
-//       transparent 66%
-//     ),
-//     -webkit-linear-gradient(top, rgba(255, 255, 255, 0.5), rgba(0, 0, 0, 0.3)),
-//     -webkit-linear-gradient(left, #673ab7, #6518ef);
-//   /* with stripe pattern*/
-//   background-size: 25px 14px, 100% 100%, 100% 100%;
-// }
-
-/* animation */
 
 // .progress-bar {
 //   background-color: lightgray;
@@ -434,35 +452,45 @@ body {
 .languages {
   ul {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   li {
-    font-family: "Expletus Sans", sans-serif;
+    font-family: 'Expletus Sans', sans-serif;
     width: 50%;
-    // float: left;
-    padding-right: 5.3333333%;
+    max-width: 500px;
     margin: 0 auto;
-    &:nth-child(even) {
-      margin-bottom: 5em;
-    }
+    padding: 10px;
+    margin-bottom: 5em;
+
     h2 {
       margin: 0 0 1.5em;
       border-bottom: 1px solid #ccc;
       padding: 0 0 0.25em;
     }
+
     p[data-value] {
       position: relative;
+
       &::after {
-        content: attr(data-value) "%";
+        content: attr(data-value) '%';
         position: absolute;
         right: 0;
       }
     }
   }
+
   progress {
+
+    span {
+      display: block;
+    }
+
     &:not(value) {
       /* Add your styles here. As part of this walkthrough we will focus only on determinate progress bars. */
     }
+
     &[value] {
       appearance: none;
       border: none;
@@ -474,18 +502,24 @@ body {
       color: royalblue;
       position: relative;
       margin: 0 0 1.5em;
+
       &::-webkit-progress-bar {
         background-color: whiteSmoke;
         border-radius: 3px;
         box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset;
       }
+
       &::-webkit-progress-value {
+        -moz-transition: width 5s;
+        -webkit-transition: width 5s;
+        transition: width 5s;
         position: relative;
         background-size: 35px 20px, 100% 100%, 100% 100%;
         border-radius: 3px;
         animation: animate-stripes 5s linear infinite;
+
         &::after {
-          content: "";
+          content: '';
           position: absolute;
           width: 5px;
           height: 5px;
@@ -495,14 +529,29 @@ body {
           border-radius: 100%;
         }
       }
+
+      &::-moz-progress-bar {
+        background-image: -moz-linear-gradient(135deg,
+            transparent,
+            transparent 33%,
+            rgba(0, 0, 0, 0.1) 33%,
+            rgba(0, 0, 0, 0.1) 66%,
+            transparent 66%),
+          -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+          -moz-linear-gradient(left, #09c, #f44);
+        background-size: 35px 20px, 100% 100%, 100% 100%;
+        border-radius: 3px;
+      }
     }
   }
+
   .progress-bar {
     background-color: whiteSmoke;
     border-radius: 3px;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5) inset;
     width: 100%;
     height: 20px;
+
     span {
       background-color: royalblue;
       border-radius: 3px;
@@ -510,38 +559,43 @@ body {
       text-indent: -9999px;
     }
   }
-  .animated {
+
+  .animatedProgress {
+    -moz-transition: width 5s;
+    -webkit-transition: width 5s;
     transition: width 5s;
-    // &::-ms-fill {
-    //   background-color: blue;
-    //   border: 0;
-    //}
+
+    &::-ms-fill {
+      background-color: blue;
+      border: 0;
+    }
+
     &::-webkit-progress-value {
+      -moz-transition: width 5s;
+      -webkit-transition: width 5s;
       transition: width 5s;
-      background-image: -webkit-linear-gradient(
-          135deg,
+      background-image: -webkit-linear-gradient(135deg,
           transparent,
           transparent 33%,
           rgba(0, 0, 0, 0.1) 33%,
           rgba(0, 0, 0, 0.1) 66%,
-          transparent 66%
-        ),
-        -webkit-linear-gradient(to top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+          transparent 66%),
+        -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
         -webkit-linear-gradient(left, #09c, #f44);
       //-webkit-linear-gradient(left, #09c, #ff0);
       //-webkit-linear-gradient(left, #09c, #690);
     }
+
     &::-moz-progress-bar {
       -moz-transition: width 5s;
+      -webkit-transition: width 5s;
       transition: width 5s;
-      background-image: -moz-linear-gradient(
-          135deg,
+      background-image: -moz-linear-gradient(135deg,
           transparent,
           transparent 33%,
           rgba(0, 0, 0, 0.1) 33%,
           rgba(0, 0, 0, 0.1) 66%,
-          transparent 66%
-        ),
+          transparent 66%),
         -moz-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
         -moz-linear-gradient(left, #09c, #f44);
       //-moz-linear-gradient(left, #09c, #ff0);
@@ -555,3 +609,41 @@ body {
     background-position: -100px 0;
   }
 }
+
+// @mixin maxw($maxw) {
+//   max-width: $maxw;
+// }
+
+// @mixin min-width($minw) {
+//   min-width: $minw;
+// }
+
+// @mixin mxh($maxh) {
+//   max-width: $maxh;
+// }
+
+// @mixin minh($minh) {
+//   min-width: $minh;
+// }
+
+// @mixin mixin($maxw, $minw) {
+//   @mixin min-width {
+//     @content;
+//   }
+// }
+
+// .header {
+//   background-color: red;
+
+//   @include mixin(30px, 50px) {
+//     background-color: purple;
+
+//     .test {
+//       background-color: purple;
+//     }
+//   }
+
+//   @include mixin(130px, 40px) {
+//     background-color: purple;
+//   }
+// }
